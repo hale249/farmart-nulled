@@ -52,11 +52,23 @@
         "spatie/laravel-ignition": "^2.0"
     },
     "autoload": {
+        "files": [
+            "overrides/Core.php",
+            "overrides/GeneralSettingController.php",
+            "overrides/Helper.php",
+            "overrides/MembershipAuthorization.php"
+        ],
         "psr-4": {
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
-        }
+        },
+        "exclude-from-classmap": [
+            "platform/core/base/src/Supports/Core.php",
+            "platform/core/setting/src/Http/Controllers/GeneralSettingController.php",
+            "platform/core/base/src/Supports/Helper.php",
+            "platform/core/base/src/Supports/MembershipAuthorization.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
